@@ -19,7 +19,7 @@ return new class extends Migration
             $table->enum('title', ['mr', 'mrs', 'miss', 'boy', 'girl']);
             $table->string('first_name', 100);
             $table->string('last_name', 100);
-            $table->string('nname', 100);
+            $table->string('nickname', 100);
             $table->string('tel', 20)->nullable();
             $table->string('email', 100)->nullable();
             $table->string('lineid', 100)->nullable();
