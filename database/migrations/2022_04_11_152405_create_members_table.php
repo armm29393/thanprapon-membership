@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('lineid', 100)->nullable();
             $table->date('date_of_birth');
             $table->date('weddingdate')->nullable();
-            $table->date('baptism_date');          
+            $table->date('baptism_date')->nullable();          
             $table->string('baptism_place', 100);          
             $table->timestamps();
         });
