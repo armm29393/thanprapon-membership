@@ -17,15 +17,16 @@ return new class extends Migration
             $table->id();
             $table->integer('member_id');
             $table->enum('title', ['mr', 'mrs', 'miss', 'boy', 'girl']);
-            $table->string('fname', 100);
-            $table->string('lname', 100);
+            $table->string('first_name', 100);
+            $table->string('last_name', 100);
             $table->string('nname', 100);
             $table->string('tel', 20)->nullable();
             $table->string('email', 100)->nullable();
             $table->string('lineid', 100)->nullable();
-            $table->date('dob');
+            $table->date('date_of_birth');
             $table->date('weddingdate')->nullable();
-            $table->string('baptism', 100);          
+            $table->date('baptism_date');          
+            $table->string('baptism_place', 100);          
             $table->timestamps();
         });
     }
