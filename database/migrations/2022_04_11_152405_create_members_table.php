@@ -15,18 +15,18 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->integer('member_id');
             $table->enum('title', ['mr', 'mrs', 'miss', 'boy', 'girl']);
-            $table->string('first_name', 100);
-            $table->string('last_name', 100);
-            $table->string('nickname', 100);
-            $table->string('tel', 20)->nullable();
-            $table->string('email', 100)->nullable();
-            $table->string('lineid', 100)->nullable();
-            $table->date('date_of_birth');
-            $table->date('weddingdate')->nullable();
-            $table->date('baptism_date')->nullable();          
-            $table->string('baptism_place', 100);          
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('nickname');
+            $table->date('birth_date');
+            $table->string('address');
+            $table->string('tel')->nullable();
+            $table->string('email')->nullable();
+            $table->string('line_id')->nullable();
+            $table->date('wedding_date')->nullable();
+            $table->string('baptism_place')->nullable();
+            $table->date('baptism_date')->nullable();
             $table->timestamps();
         });
     }
