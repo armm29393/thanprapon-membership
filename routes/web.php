@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->middleware('auth');
 
 Route::get('/profile', [HomeController::class, 'profile']);
 Route::post('/profile', [HomeController::class, 'updateProfile']);
