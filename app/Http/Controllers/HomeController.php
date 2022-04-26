@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         if($request->input('email') != $data->email){
             $request->validate([
-                'email' => 'required|email|unique:users',
+                'email' => 'required|unique:users',
             ]);
             $data->email = $request->input('email');
         }

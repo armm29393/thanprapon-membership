@@ -19,8 +19,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" name="email" id="email" value="{{ \Illuminate\Support\Facades\Auth::user()->email }}" required>
+                                        <label for="email">Username</label>
+                                        <input type="text" class="form-control" name="email" id="email" value="{{ \Illuminate\Support\Facades\Auth::user()->email }}" required>
                                     </div>
                                 </div>
                             </div>
@@ -29,13 +29,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password">
+                                        <input type="password" class="form-control" name="password" id="password" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="password_confirmation">Confirm Password</label>
-                                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
+                                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" required>
                                     </div>
                                 </div>
                             </div>
