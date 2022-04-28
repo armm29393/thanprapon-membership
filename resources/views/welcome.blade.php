@@ -21,7 +21,7 @@
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             <div class="fixed top-0 right-0 px-6 py-4 sm:block">
                 @if (Auth::check())
-                <a href="{{ url('/home') }}" class="text-lg text-gray-700 underline" style="color: white;">Member Manager</a>
+                <a href="{{ url('/member') }}" class="text-lg text-gray-700 underline" style="color: white;">Member Manager</a>
                 @else
                 <a href="{{ route('login') }}" class="text-lg text-gray-700 underline" style="color: white;">Login</a>
                 @endif

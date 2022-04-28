@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/member', function () {
+    return view('member.index');
 })->middleware('auth');
 
 Route::get('/profile', [HomeController::class, 'profile']);
