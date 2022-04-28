@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/member', function () {
+    return view('member.index');
+})->middleware('auth');
+
+Route::get('/profile', [HomeController::class, 'profile']);
+Route::post('/profile', [HomeController::class, 'updateProfile']);
+
+require __DIR__.'/auth.php';

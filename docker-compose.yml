@@ -40,7 +40,7 @@ services:
     working_dir: /var/www/laravel
     volumes_from:
       - php
-    command: "composer install" # คำสั่ง สำหรับ install package
+    command: "composer install && cp .env.example .env && php artisan key:generate" # คำสั่ง สำหรับ install package
 
 
   # Phpmyadmin (optional) อันนี้เพิ่มเติม หากว่าเราต้องการที่จะ explore database อันนี้ขี้เกียจอธิบายละ 5555
