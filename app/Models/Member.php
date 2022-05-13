@@ -9,6 +9,8 @@ class Member extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function vaccinations()
     {
         return $this->hasMany(Vaccination::class);
