@@ -30,6 +30,11 @@ class MemberResource extends Resource
                         'boy' => 'เด็กชาย',
                         'girl' => 'เด็กหญิง',
                     ])
+                    ->columnSpan([
+                        'sm' => 1,
+                        'xl' => 2,
+                        '2xl' => 2,
+                    ])
                     ->required(),
                 Forms\Components\TextInput::make('first_name')
                     ->label('ชื่อ')
@@ -68,7 +73,11 @@ class MemberResource extends Resource
                 Tables\Columns\TextColumn::make('first_name'),
                 Tables\Columns\TextColumn::make('last_name'),
                 Tables\Columns\TextColumn::make('nickname'),
-                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('line_id')
+                    ->label('Line ID')
+                    ->default('-'),
+                Tables\Columns\TextColumn::make('email')
+                    ->default('-'),
             ])
             ->filters([
                 //
@@ -78,7 +87,7 @@ class MemberResource extends Resource
     public static function getRelations(): array
     {
         return [
-            // RelationManagers\VaccinationsRelationManager::class,
+            RelationManagers\VaccinationsRelationManager::class,
         ];
     }
     
