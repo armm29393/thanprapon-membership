@@ -9,6 +9,8 @@ class Vaccination extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function member()
     {
         return $this->belongsTo(Member::class);
