@@ -59,4 +59,9 @@ class VaccinationsRelationManager extends HasManyRelationManager
                 //
             ]);
     }
+
+    protected function isTablePaginationEnabled(): bool 
+    {
+        return false;
+    }
 }
